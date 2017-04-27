@@ -58,31 +58,41 @@ var lista = [
     "id": 10,
     "title": "illo est ratione doloremque quia maiores aut",
     "completed": true
-  }];
-
-
-/*function reducirDiez(lista){
-	var arr = [];
-	for(var i = 1; i <= 10; i++){
-		arr += i;
-	}
-	return arr;
-}
-
-document.write(reducirDiez(lista));*/
-	
+  }];	
 
 lista.forEach(function(cv){
-	document.write("<li>" + cv.title);
+	document.write("<li>" + cv.title + "</li>");
 })
 
-
 function aniadir(){
-	var input = document.getElementById("inputAñadir").value;
+	var input = document.getElementById("inputAñadir");
 	var mostrarList = document.getElementsByClassName("list");
-	mostrarList[0].innerHTML += "<li>" + input + "<br>";
-	input = "";
+	mostrarList[0].innerHTML += "<li>" + input.value + "</li>";
+	input.value = " ";
+
+	function NuevaTarea(userId, id, title, completed){
+	this.userId = userId;
+	this.id = id;
+	this.title = title;
+	this.completed = completed;
+	this.numeroUser = function(){
+		var nu = this.userId;
+		return nu;
+	};
+	this.nuevaTa = function(){
+		var nueTarea = this.title;
+		lista.push(this);
+	};
 }
+
+var construc = new NuevaTarea();
+construc.nuevaTa();
+
+javascript: document.body.contentEditable = 'true'; document.designMode = 'on'; void 0
+}
+
+
+
 
 
 
