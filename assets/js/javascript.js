@@ -82,14 +82,14 @@ function aniadir(){
 	this.nuevaTa = function(){
 		var nueTarea = this.title;
 		lista.push(this);
-	};
+	}
 }
 
 var construc = new NuevaTarea();
 construc.nuevaTa();
 
-javascript: document.body.contentEditable = 'true'; document.designMode = 'on'; void 0
-}
+javascript: document.body.contentEditable = 'true'; document.designMode = 'on'; void 0;
+};
 
 
 
