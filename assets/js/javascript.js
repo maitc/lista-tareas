@@ -70,16 +70,19 @@ var lista = [
 }
 
 document.write(reducirDiez(lista));*/
+	
 
-/*function creacionLista(){
-	var llamarList = document.getElementsById("1");
-	llamarList.innerHTML = lista;
-}*/
+lista.forEach(function(cv){
+	document.write("<li>" + cv.title);
+})
+
 
 function aniadir(){
 	var input = document.getElementById("inputAñadir").value;
-	var mostrarList = document.getElementById("mostrar");
-	mostrarList.innerHTML = input;
+	var mostrarList = document.getElementsByClassName("list");
+	mostrarList[0].innerHTML += "<li>" + input + "<br>";
+	input = "";
 }
+
 
 
